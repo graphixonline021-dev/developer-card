@@ -1,0 +1,193 @@
+    :root {
+        --bg-color: #f4f7fe;
+        --card-bg: #ffffff;
+        --text-primary: #1f2937;
+        --text-secondary: #4b5563;
+        --accent-color: #2563eb;
+        --accent-hover: #1d4ed8;
+        --badge-bg: #e0e7ff;
+        --badge-text: #3730a3;
+        --border-radius: 16px;
+    }
+
+    [data-theme="dark"] {
+        --bg-color: #0f172a;
+        --card-bg: #1e293b;
+        --text-primary: #f8fafc;
+        --text-secondary: #94a3b8;
+        --badge-bg: #312e81;
+        --badge-text: #c7d2fe;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-primary);
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .card-container {
+        position: relative;
+        width: 100%;
+        max-width: 440px;
+        padding: 30px 24px;
+        text-align: center;
+        background-color: var(--card-bg);
+        border-radius: var(--border-radius);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+    }
+
+    .theme-btn {
+        display: block;
+        margin: 0 0 25px auto;
+        padding: 8px 13px;
+        border: 1px solid var(--text-secondary);
+        border-radius: 20px;
+        background: transparent;
+        color: var(--text-primary);
+        cursor: pointer;
+        font-size: 0.8rem;
+        transition: 0.2s ease;
+    }
+
+    .theme-btn:hover {
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+    }
+
+    .avatar {
+        margin-bottom: 10px;
+        font-size: 3.5rem;
+    }
+
+    .profile-header h1 {
+        margin: 5px 0;
+        font-size: 1.6rem;
+    }
+
+    .tagline {
+        margin-bottom: 22px;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .skills-badges {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 25px;
+    }
+
+    .badge {
+        padding: 6px 12px;
+        border-radius: 20px;
+        background-color: var(--badge-bg);
+        color: var(--badge-text);
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .links-section {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .link-btn {
+        display: block;
+        padding: 12px;
+        border: 1px solid var(--text-secondary);
+        border-radius: 10px;
+        color: var(--text-primary);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+        transition: all 0.2s ease;
+    }
+
+    .link-btn:hover {
+        transform: translateY(-2px);
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+    }
+
+    .link-btn.highlight {
+        border-color: var(--accent-color);
+        background-color: var(--accent-color);
+        color: #ffffff;
+    }
+
+    .link-btn.highlight:hover {
+        background-color: var(--accent-hover);
+        border-color: var(--accent-hover);
+        color: #ffffff;
+    }
+
+    .services-box {
+        margin-top: 20px;
+        padding: 18px;
+        border-radius: 10px;
+        background-color: var(--bg-color);
+        text-align: left;
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+
+    .services-box h3 {
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+
+    .services-box ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .services-box li {
+        margin-bottom: 10px;
+        list-style: none;
+    }
+
+    .services-box li:last-child {
+        margin-bottom: 0;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    footer p {
+        margin-top: 25px;
+        margin-bottom: 0;
+        color: var(--text-secondary);
+        font-size: 0.75rem;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+        outline: 3px solid var(--accent-color);
+        outline-offset: 3px;
+    }
+
+    @media (max-width: 360px) {
+        .card-container {
+            padding: 24px 16px;
+        }
+
+        .profile-header h1 {
+            font-size: 1.35rem;
+        }
+    }
